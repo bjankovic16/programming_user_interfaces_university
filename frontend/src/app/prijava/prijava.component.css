@@ -1,0 +1,76 @@
+.poruka{
+    color: rgb(255, 0, 43);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:30px
+}
+
+.content{
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 33%;
+    margin-right: 33%;
+    height: 10cm;
+}
+body {
+    background-image:url("../../assets/slikeSajt/pozadina.jpg") ;
+    height: 100%;
+    width: 100%;
+    overflow-y:auto
+   }
+   
+button{
+    background-color:rgb(206, 227, 246);
+    width: 2.5cm;
+    height: 30px;
+    border-color: rgb(206, 227, 246);
+    color:black;
+    cursor: pointer;
+}
+
+img{
+    max-width: 100;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.font{
+    font-family: "Helvetica",sans-serif;
+    font-size: 40px;
+    line-height: 40px;
+    height: 40px;
+    color: blanchedalmond; 
+}
+
+.fon{
+    font-family: "Helvetica",sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    height: 40px;
+    color: blanchedalmond; 
+}
+
+input[type=text] {
+    transition: width 0.4s ease-in-out;
+    height:20px
+}
+
+input[type=password] {
+    transition: width 0.4s ease-in-out;
+    height:20px
+}
+
+.prik {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+    border-spacing:  7px;
+    color:black ;
+    height:max-content;
+}
+
+  

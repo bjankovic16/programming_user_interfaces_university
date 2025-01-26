@@ -1,0 +1,44 @@
+<app-header></app-header><br/>
+<table *ngIf="racuni.length>0">
+    <tr>
+        <th>Naziv preduzeća</th>
+        <th>Naziv objekta</th>
+        <th>Iznos u dinarima</th>
+        <th>Način plaćanja</th>
+        <th>Odaberi račun</th>
+    </tr>
+    <tr *ngFor="let r of racuni">
+        <th>{{r.imePreduzeca}}</th>
+        <th>{{r.imeObjekta}}</th>
+        <th>{{r.vrednost}}</th>
+        <th>{{r.nacinPlacanja}}</th>
+        <th><button (click)="dodatniDetalji(r)">Dodatni detalji</button></th>
+    </tr>
+</table>
+
+<div *ngIf="detalji==true"><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;Datum plaćanja: {{rac.datum}}<br/>
+    <table>
+        <tr>
+            <th>Kupljene stavke</th>
+            <th>Količina kupjenih stavki</th>
+        </tr>
+        <tr *ngFor="let s of rac.stavke">
+            <th>{{s.naziv}}</th>
+            <th>{{s.kolicina}}</th>
+        </tr>
+
+    </table>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button (click)="zatvoriPregled()">Zatvori pregled</button>
+</div>
+<div class="cardList">
+    <div id="divChart">
+        <canvas id="myChart"></canvas>
+    </div>
+    
+    <div id="divChart">
+        <canvas id="myChart2"></canvas>
+    </div>    
+</div>
+
+

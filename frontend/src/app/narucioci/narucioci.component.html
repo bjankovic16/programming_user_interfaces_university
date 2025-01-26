@@ -1,0 +1,53 @@
+<app-header></app-header>
+<h3>Čekirajte za promenu načina unosa naručioca:<input type="checkbox" [(ngModel)]="flag"></h3>
+<div *ngIf="flag==true">
+    <table>
+        <tr>
+            <th>Pretrazi preduzeca po pib-u</th>
+            <th><input type="text" [(ngModel)]="pib" (change)="pretraga()"></th>
+        </tr>
+        <tr>
+            <th>Odaberite preduzeće iz padajuće liste:</th>
+            <th><select [(ngModel)]="izabranoPreduzece">
+                <option *ngFor="let p of preduzeca" [ngValue]="p">{{p.naziv}}</option>
+            </select></th>
+        </tr>
+        <tr>
+            <th>Unesite broj dana</th>
+            <th><input type="text" [(ngModel)]="broj"><br/></th>
+        </tr>
+        <tr>
+            <th>Unesite procenat rabata</th>
+            <th><input type="text" [(ngModel)]="procenat"><br/></th>
+        </tr>
+        <button (click)="naruci()">Potvrda</button>
+        <output class="poruka">{{poruka}}</output>
+    </table>
+</div>
+<div *ngIf="flag==false">
+    <table>
+        <tr>
+            <th>Unesite naziv firme naručioca</th>
+            <th><input type="text" [(ngModel)]="naziv"></th>
+        </tr>
+        <tr>
+            <th>Unesite PIB firme naručioca</th>
+            <th><input type="text" [(ngModel)]="pibNovi"></th>    
+        </tr>
+        <tr>
+            <th>Unesite matični broj firme naručioca</th>
+            <th><input type="text" [(ngModel)]="m"></th>
+        </tr>
+        
+        <tr>
+            <th>Unesite broj dana</th>
+            <th><input type="text" [(ngModel)]="broj"><br/></th>
+        </tr>
+        <tr>
+            <th>Unesite procenat rabata</th>
+            <th><input type="text" [(ngModel)]="procenat"><br/></th>
+        </tr>
+        <button (click)="naruci()">Potvrda</button>
+        <output class="poruka">{{poruka}}</output>
+    </table>
+</div>

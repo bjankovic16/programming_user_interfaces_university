@@ -1,0 +1,12 @@
+<app-header></app-header>
+<br/>
+<button *ngIf="unos==false" (click)="unesiOdeljenje()">Unesi odeljenje</button>
+<button (click)="obrisi()">Obrisi odeljenja</button><br/><br/>
+<div *ngIf="unos==true">
+    <input type="text" [(ngModel)]="ime">&nbsp;
+    <button (click)="potvrda()">Potvrdi</button>&nbsp;
+    <button (click)="unos=false">Ponisti</button>
+</div>
+<div class="cardList">
+    <ng-container #container></ng-container>
+</div>

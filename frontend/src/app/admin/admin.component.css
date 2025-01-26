@@ -1,0 +1,46 @@
+table{
+    table-layout: auto;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    color: #38444d;
+    width: 50%;
+    position: center;
+    margin-top: 1cm;
+    width:18cm
+}
+button{
+    width: 4.5cm;
+    height: 35px;
+    font-size: large;
+    color: antiquewhite;
+    background-color: #38444d;
+    cursor: pointer;
+    background-color:rgb(244, 13, 13); 
+    border-color:rgb(244, 13, 13); 
+}
+input[type=text] {
+    transition: width 0.4s ease-in-out;
+    height:20px
+}
+
+textarea{
+    resize: none;
+    color:#38444d;
+    font-size: 20px;
+    font-display: center;
+    border: #38444d;
+    width: 100%;
+    width: 4.2cm;
+    height: 35px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+select{
+    height:30px;
+    width:120px;
+}

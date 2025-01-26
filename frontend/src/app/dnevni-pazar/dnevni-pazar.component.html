@@ -1,0 +1,13 @@
+<app-header></app-header>
+<table *ngIf="izvestaj.length>0">
+    <tr>
+        <th>Dan:</th>
+        <th>Vrednost racuna:</th>
+        <th *ngIf="pdv==true">Porez:</th>
+    </tr>
+    <tr *ngFor="let i of izvestaj">
+        <th>{{i.datum}}</th>
+        <th>{{i.vrednost}}</th>
+        <th *ngIf="pdv==true">{{i.porez}}</th>
+    </tr>
+</table>

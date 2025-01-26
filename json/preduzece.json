@@ -1,0 +1,126 @@
+[{
+  "_id": {
+    "$oid": "62c2cf4463c93443c7c55103"
+  },
+  "kor_ime": "korisnik1",
+  "lozinka": "Aasas11?s",
+  "ime": "Aleksa",
+  "prezime": "Jovanovic",
+  "br_tel": "+3211221",
+  "e_mail": "aleksa@gmail.com",
+  "naziv": "Alek",
+  "drzava": "Srbija",
+  "grad": "Kraljevo",
+  "pos_br": "36000",
+  "ulica": "Carigradska",
+  "broj": "21",
+  "pib": "111122221",
+  "mat_br": "22221111",
+  "slika": "elektronska-fiskalizacija.png",
+  "registrovan": true,
+  "sifraDelatnosti": [
+    "4634"
+  ],
+  "banke": [
+    {
+      "brojRacuna": "123-222211112222-12",
+      "imeBanke": "Raiffaisen"
+    }
+  ],
+  "magacini": [
+    {
+      "id": 1,
+      "naziv": "magacin1"
+    },
+    {
+      "id": 2,
+      "naziv": "magacin2"
+    },
+    {
+      "id": 3,
+      "naziv": "magacin3"
+    },
+    {
+      "id": 25,
+      "naziv": "magacin4"
+    }
+  ],
+  "kase": [
+    {
+      "lokacija": "Kraljevo",
+      "tip": "SMART TILL"
+    }
+  ],
+  "__v": 0,
+  "brojK": 1,
+  "brojR": 1,
+  "pdv": true,
+  "tip": "p"
+},{
+  "_id": {
+    "$oid": "62c2d43263c93443c7c5517b"
+  },
+  "kor_ime": "restoran1",
+  "lozinka": "Aasas11?s",
+  "ime": "Jovan",
+  "prezime": "Jankovic",
+  "br_tel": "+323232",
+  "e_mail": "joco@gmail.com",
+  "naziv": "Jocke.doo",
+  "drzava": "Srbija",
+  "grad": "Subotica",
+  "pos_br": "12000",
+  "ulica": "Resavska",
+  "broj": "1",
+  "pib": "111199999",
+  "mat_br": "99997777",
+  "slika": "pozadinaPrijava2.jpg",
+  "registrovan": true,
+  "sifraDelatnosti": [
+    "4617",
+    "2321"
+  ],
+  "banke": [
+    {
+      "brojRacuna": "333-232323232323-33",
+      "imeBanke": "Srpska"
+    },
+    {
+      "brojRacuna": "222-222221222121-21",
+      "imeBanke": "Unikredit"
+    }
+  ],
+  "magacini": [
+    {
+      "id": 4,
+      "naziv": "magacin4"
+    },
+    {
+      "id": 5,
+      "naziv": "magacin5"
+    },
+    {
+      "id": 27,
+      "naziv": "magacin27"
+    },
+    {
+      "id": 28,
+      "naziv": "magacin007"
+    }
+  ],
+  "kase": [
+    {
+      "lokacija": "Subotica",
+      "tip": "SMART TILL"
+    },
+    {
+      "lokacija": "Novi Sad",
+      "tip": "CS 30 PRO"
+    }
+  ],
+  "__v": 0,
+  "brojK": 1,
+  "brojR": 1,
+  "pdv": true,
+  "tip": "u"
+}]

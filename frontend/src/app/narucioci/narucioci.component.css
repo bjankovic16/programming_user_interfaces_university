@@ -1,0 +1,38 @@
+table{
+    table-layout: auto;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    color: #38444d;
+    width: 50%;
+    position: center;
+    margin-top: 1cm;
+    width:18cm
+}
+button{
+    width: 4.5cm;
+    height: 44px;
+    font-size: large;
+    color: antiquewhite;
+    background-color: #38444d;
+    cursor: pointer;
+    background-color:rgb(244, 13, 13); 
+    border-color:rgb(244, 13, 13); 
+}
+input[type=text] {
+    transition: width 0.4s ease-in-out;
+    height:33px
+}
+
+.text{
+    text-align: center;
+}
+
+.poruka{
+    color:rgb(244, 13, 13); 
+}
+select{
+    width:4.5cm;
+    height:1cm;
+}

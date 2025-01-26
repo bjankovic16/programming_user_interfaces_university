@@ -1,0 +1,17 @@
+<table>
+    <tr>
+        <th>Unesite staru lozinku</th>
+        <th><input type="password" [(ngModel)]="pas"></th>
+    </tr>
+    <tr>
+        <th>Unesite novu lozinku:</th>
+        <th><input type="password" [(ngModel)]="pas1"></th>
+    </tr>
+    <tr>
+        <th>Potvrdite novu lozinku:</th>
+        <th><input type="password" [(ngModel)]="pas2"></th>
+    </tr>
+</table><br/>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+<button mat-button (click)="potvrdi()">Potvrda</button> &nbsp; &nbsp;&nbsp;
+<button mat-button mat-raised-button mat-dialog-close>Poništi</button>
+<p  style="color: red; text-align: center;">{{poruka}}</p>

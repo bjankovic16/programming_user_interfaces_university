@@ -1,0 +1,32 @@
+[{
+  "_id": {
+    "$oid": "62c2cf4463c93443c7c55100"
+  },
+  "username": "korisnik1",
+  "password": "Aasas11?33",
+  "registrovan": true,
+  "tip": "p",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c2d1e063c93443c7c5515d"
+  },
+  "username": "korisnik2",
+  "password": "Aasas11?s",
+  "registrovan": true,
+  "tip": "k",
+  "__v": 0,
+  "ime": "Bogdan",
+  "licna": "999900000",
+  "prezime": "Jankovic",
+  "telefon": "+323232"
+},{
+  "_id": {
+    "$oid": "62c2d43263c93443c7c55178"
+  },
+  "username": "restoran1",
+  "password": "Aasas11?s",
+  "registrovan": true,
+  "tip": "u",
+  "__v": 0
+}]

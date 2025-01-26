@@ -1,0 +1,28 @@
+<app-header></app-header>
+<div class="centar">
+    <div *ngIf="flag==true">
+    Formiraj kategoriju:&nbsp;
+    <input type="text" [(ngModel)]="ime"> &nbsp;&nbsp;
+    <button (click)="dodajKategoriju()">FORMIRAJ</button>
+    </div>
+    <div *ngIf="flag==false">
+        Formiraj potkategoriju:&nbsp;
+        <input type="text" [(ngModel)]="potkategorijaNova"> &nbsp;&nbsp;
+        <button (click)="dodajPotkategoriju()">FORMIRAJ</button>
+    </div>
+</div>
+<div class="container">
+    <table *ngIf="kategorijaNova!=null" class="table2">
+        <tr class="i2">{{kategorijaNova}}</tr>
+        <tr *ngFor="let k of potkategorije" class="i1">{{k}}</tr>
+        <button (click)="zavrsiDodavanje()">Zavrsi dodavanje</button>
+    </table>
+    
+    <table class="table" *ngIf="str!=null && str.length>0">
+        <tr *ngFor="let s of str">
+            <th [ngStyle]="{'color':s.tip==true?'#38444d':'#757a7e'}">{{s.ime}}</th>
+            <th><button (click)="dodeliProizvod(s.ime)">Dodeli proizvod</button></th>
+        </tr>
+    </table>    
+</div>
+

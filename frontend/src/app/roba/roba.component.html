@@ -1,0 +1,191 @@
+<app-header></app-header>
+<div *ngIf="flagU==false">
+<h2>Ukupno artikala: {{siz}}</h2>
+<table class="tabelaPrikaz"  *ngIf="siz>0">
+    <tr>
+        <th>Šifra artikala</th>
+        <th>Naziv artikla</th>
+        <th>Jedinica mere</th>
+        <th>Stopa poreza</th>
+        <th>Proizvodjač</th>
+    </tr>
+    <tr *ngFor="let r of roba | paginate: { itemsPerPage: 10 , currentPage: p }">
+        <th>{{r.sifra}}</th>
+        <th>{{r.naziv}}</th>
+        <th>{{r.jedinica}}</th>
+        <th>{{r.stopa}}</th>
+        <th>{{r.proizvodjac}}</th>
+        <th><button (click)="izmeni(r)">IZMENA</button></th>
+        <th><button (click)="obrisi(r)">BRISANJE</button></th>
+    </tr>
+</table>
+<div class="centar">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+</div>
+<div class="centar">
+    <button *ngIf="flagU==false" (click)="omoguciU()">UNOS ARTIKLA</button>
+</div>
+
+
+<div *ngIf="flagU==true">
+    <div class="centar"> 
+    <button (click)="tipO()">Opšti podaci</button>
+    <button (click)="tipD()">Dopunski podaci</button>
+    <button (click)="tipS()">Cene i stanja robe</button><br/>
+    </div>
+    <div *ngIf="tip=='o'">
+        <table>
+            <tr>
+                <th>Šifra artikla:</th>
+                <th><input type="text" [(ngModel)]="r.sifra" value="{{r.sifra}}"></th>
+            </tr>
+            <tr>
+                <th>Naziv artikla:</th>
+                <th><input type="text" [(ngModel)]="r.naziv" value="{{r.naziv}}"></th>
+            </tr>
+            <tr>
+                <th>Jedinica artikla:</th>
+                <th><select [(ngModel)]="r.jedinica" value="{{r.jedinica}}">
+                    <option value="kilogram">kilogram</option>
+                    <option value="gram">gram</option>
+                    <option value="litar">litar</option>
+                    <option value="komad">komad</option>
+                    <option value="paket">paket</option>
+                    <option value="gajba">gajba</option>
+                </select>
+                </th>
+            </tr>
+            <tr>
+                <th> Stopa:</th>
+                <th><select [(ngModel)]="r.stopa" value="{{r.stopa}}">
+                    <option value="20">opsta</option>
+                    <option value="10">posebna</option>
+                    <option value="0">nema pdv</option>
+                </select>
+                </th>
+            </tr>
+            <tr>
+                <th>Proizvodjač:</th>
+                <th><input type="text" [(ngModel)]="r.proizvodjac" value="{{r.proizvodjac}}"></th>
+            </tr>
+            <tr *ngIf="preduzece.tip=='u'">
+                <th>Tip artikla:</th>
+                <th><div>
+                    <input type="radio" name="tip" value="hrana" [(ngModel)]="r.tip">hrana
+                    <input type="radio" name="tip" value="pice" [(ngModel)]="r.tip">piće
+                    <input type="radio" name="tip" value="sirovina" [(ngModel)]="r.tip">sirovina
+                </div></th>
+            </tr>
+            <tr>
+                <th>Naziv magacina:</th>
+                <th><select [(ngModel)]="r.nazivMagacina">
+                    <option *ngFor="let m of preduzece.magacini" (ngValue)="m.naziv">{{m.naziv}}</option>
+                </select>
+                </th>
+            </tr>
+            <tr>
+                <th> Nabavna cena:</th>
+                <th><input type="text" [(ngModel)]="r.nabavna"></th>
+            </tr>
+            <tr>
+                <th>Prodajna cena:</th>
+                <th><input type="text" [(ngModel)]="r.prodajna"></th>
+            </tr>
+            <tr>
+                <th>Tekuće stanje:</th>
+                <th><input type="text" [(ngModel)]="r.stanje"></th>
+            </tr>
+            <tr>
+                <th>Min zeljena količina:</th>
+                <th><input type="text" [(ngModel)]="r.minKolicina"></th>
+            </tr>
+            <tr>
+                <th>Maks zeljena kolicina:</th>
+                <th><input type="text" [(ngModel)]="r.maxKolicina"></th>
+            </tr>
+        </table>
+        <div class="centar" style="color:rgb(255, 0, 43); font-size: 0.5cm;">
+            {{message}}
+        </div>
+    </div>
+    <div>
+        <table *ngIf="tip=='d'">
+            <tr>
+                <th>Poreklo:</th>
+                <th><input type="text" [(ngModel)]="r.poreklo"></th>
+            </tr>
+            <tr>
+                <th>Strani naziv:</th>
+                <th><input type="text" [(ngModel)]="r.sNaziv"></th>
+            </tr>
+            <tr>
+                <th>Bar kod:</th>
+                <th><input type="text" [(ngModel)]="r.barKod"></th>
+            </tr>
+            <tr>
+                <th>Carina:</th>
+                <th><input type="text" [(ngModel)]="r.carina"></th>
+            </tr>
+            <tr>
+                <th>Taksa</th>
+                <th><input type="checkbox" [(ngModel)]="r.taksa" ></th>
+            </tr>
+            <tr>
+                <th>Zalihe minimum:</th>
+                <th><input type="text" [(ngModel)]="r.min"></th>
+            </tr>
+            <tr>
+                <th>Zalihe maksimum:</th>
+                <th><input type="text" [(ngModel)]="r.max"></th>
+            </tr>
+            <tr>
+                <th>Opis:</th>
+                <th><textarea [(ngModel)]="r.opis"></textarea></th>       
+            </tr>
+            <tr>
+                <th>Deklaracija:</th>
+                <th><input type="text" [(ngModel)]="r.deklaracija"></th>
+            </tr>
+            <tr>
+                <th>Biranje slike artikla:</th>
+                <th><input type="file" (change)="onFileSelected($event)" accept=".png,.jpg"  [(ngModel)]="selectedFile" ></th>
+            </tr>
+            <tr>
+                <th>Izabrana slika:</th>
+                <th><output>{{r.slika}}</output></th>
+            </tr>
+        </table>
+    </div>
+    <div *ngIf="tip=='s'">
+        <table class="tabelaPrikazV" *ngIf="roba.length>0">
+            <tr>
+                <th>Naziv magacina objekta</th>
+                <th>Naziv robe</th>
+                <th>Nabavna cena rsd</th>
+                <th>Prodajna cena rsd</th>
+                <th>Tekuće stanje lagera</th>
+                <th>Min zeljena kol</th>
+                <th>Maks zeljena kol</th>
+            </tr>
+            <tr *ngFor="let m of roba">
+                <th>{{m.nazivMagacina}}</th>
+                <th>{{m.naziv}}</th>
+                <th>{{m.nabavna}}</th>
+                <th>{{m.prodajna}}</th>
+                <th>{{m.stanje}}</th>
+                <th>{{m.minKolicina}}</th>
+                <th>{{m.maxKolicina}}</th>
+            </tr>
+        </table>
+        <div class="centar">
+            <button (click)="ponistiU()">Ponisti pregled</button>
+        </div>
+    </div>
+    <div class="centar">
+        <button *ngIf="tip!='s'" (click)="ponistiU()">Poništi unos</button><br/>
+        <button *ngIf="tip!='s'" (click)="unos()">UNOS</button>
+    </div>
+</div>
+
+

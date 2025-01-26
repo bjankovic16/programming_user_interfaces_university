@@ -1,0 +1,35 @@
+<app-header></app-header><br/>
+<div style="display:flex">
+<div>
+    Unesite u polje proizvod koji želite:
+    <input type="text" [(ngModel)]="proizvod" (change)="onChangeEvent($event)"><br/>
+    Čekirajte ako želite i pretragu po proizvođačima
+    <input type="checkbox" [(ngModel)]="potvrda">
+    <div *ngIf="potvrda==true">Unesite u polje proizvođača artikla:
+    <input type="text" [(ngModel)]="proizvodjac" (change)="onChangeEvent($event)"><br/>
+    </div>
+    Kliknite ako zelite artikle sa najnižom cenom:
+    <input type="checkbox" [(ngModel)]="najnizaCena" (change)="najnizaCenaFun($event)">
+    <table *ngIf="proizvodi!=null && proizvodi.length>0">
+        <tr>
+            <th>Naziv artikla</th>
+            <th>Proizvođač artikla</th>
+            <th>Cena artikla</th>
+            <th>Maloprodajni objekat</th>
+        </tr>
+        <tr *ngFor="let p of proizvodi">
+            <th>{{p.naziv}}</th>
+            <th>{{p.proizvodjac}}</th>
+            <th>{{p.prodajna}}</th>
+            <th>{{p.imePreduzeca}}</th>
+        </tr>
+    </table>
+    <br/>
+    <a [routerLink]="['pregledRacunaKupac']">PREGLED RAČUNA...</a>
+</div>
+<div style="margin-left: auto;">
+    <mat-icon style="height:50px;width:50px;font-size: 50px;cursor: pointer;" (click)="logout()">logout</mat-icon>  
+   &nbsp;&nbsp;
+    <mat-icon style="height:50px;width:50px;font-size: 50px; cursor: pointer;" (click)="openDialog()">build</mat-icon>
+  </div>
+</div>

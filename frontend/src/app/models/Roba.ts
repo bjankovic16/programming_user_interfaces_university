@@ -1,0 +1,27 @@
+export class Roba{
+    kor_ime:string
+    imePreduzeca:string
+    sifra:string
+    naziv:string
+    jedinica:string
+    stopa:number
+    proizvodjac:string
+    tip:string
+    poreklo:string
+    sNaziv:string
+    barKod:string
+    carina:string
+    taksa:boolean
+    min:number
+    max:number
+    opis:string
+    deklaracija:string
+    nazivMagacina:string
+    nabavna:number
+    prodajna:number
+    stanje:number
+    minKolicina:number
+    maxKolicina:number
+    kategorija:string
+    slika:string
+}

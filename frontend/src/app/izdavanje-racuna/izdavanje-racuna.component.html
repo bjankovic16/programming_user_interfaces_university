@@ -1,0 +1,66 @@
+<app-header></app-header><br/>
+<div *ngIf="prikaza==true && reg==true">
+Odaberite odakle se izdaje racun:
+<input type="radio" name="odakle" value="magacin" [(ngModel)]="odakle">Objekat
+<input type="radio" name="odakle" value="objekat" [(ngModel)]="odakle">Magacin
+<button (click)="odaberi(); prikaza=false;">Potvrdi</button>
+</div>
+<div *ngIf="reg==false">
+    Odaberite odakle se izdaje racun:
+<input type="radio" name="odakle" value="objekat" [(ngModel)]="odakle">Magacin
+<button (click)="odaberi(); prikaza=false;">Potvrdi</button>
+</div>
+ <div *ngIf="prikaz==true">
+    Odaberite magacin:&nbsp;
+    <select [(ngModel)]="imeMagacina">
+        <option *ngFor="let m of magacini" value="{{m.naziv}}">{{m.naziv}}</option>
+    </select>&nbsp;
+    <button (click)="potvrdaMagacin()">Potvrdi</button><br/>
+    <div *ngIf="odabranM==true">
+    Odaberite robu:&nbsp;
+    <select [(ngModel)]="robaKupovina">
+        <option *ngFor="let r of roba" [ngValue]="r">{{r.naziv}}</option>
+    </select>&nbsp;
+        Unesite kolicinu: <input type="text" [(ngModel)]="kolicina">&nbsp;
+        <button (click)="kupiStavku()">Kupi</button>
+    </div>
+    <p>{{poruka}}</p>
+    <button (click)="izbaciR()">Izbaci račun</button>
+    <table *ngIf="racun.stavke.length>0">
+        <tr>
+            <th>Ime robe</th>
+            <th>Količina robe</th>
+        </tr>
+        <tr *ngFor="let s of racun.stavke">
+            <th>{{s.naziv}}</th>
+            <th>{{s.kolicina}}</th>
+        </tr>
+    </table>
+</div><br/>
+<div *ngIf="biranjeTipa==true">
+    <select [(ngModel)]="tipPlacanja">
+        <option value="gotovina">Gotovina</option>
+        <option value="cek">Cek kartica</option>
+        <option value="virman">Virman</option>
+    </select>
+    <div *ngIf="tipPlacanja=='gotovina'">
+        Unesite novac:&nbsp;<input type="text" [(ngModel)]="novac">
+        Unesite broj lične karte:&nbsp;<input type="text" [(ngModel)]="licna">&nbsp;
+        <button (click)="platiGotovina()">Plati</button>&nbsp;
+    </div>
+    <div *ngIf="tipPlacanja=='cek'">
+        Unesite ime:&nbsp;<input type="text" [(ngModel)]="ime">&nbsp;
+        Unesite prezime:&nbsp;<input type="text" [(ngModel)]="prezime">&nbsp;<br/>
+        Unesite broj licne karte:<input type="text" [(ngModel)]="licna">&nbsp;
+        Unesite broj slip racuna<input type="text" [(ngModel)]="slip">&nbsp;
+        <button (click)="platiCek()">Plati</button>
+    </div>
+    <div *ngIf="tipPlacanja=='virman'">
+        <select [(ngModel)]="pibVirmana">
+            <option *ngFor="let n of narucioci" [ngValue]="n.pib">{{n.naziv}}-{{n.pib}}</option>
+        </select>&nbsp;
+        <button (click)="platiVirman()">Plati</button>
+    </div>
+    <p>{{poruka1}}</p>
+</div>
+

@@ -1,0 +1,65 @@
+<head>
+    <title>Logovanje</title>
+</head>
+<app-header></app-header>
+<body>
+    <mat-icon style="cursor:pointer" (click)="prijavaAdmin()">account_circle</mat-icon>
+    <div class='content'>
+        <h2 class="font">Prijava na sistem</h2>             
+        <form name='logovanje'>
+            <table>
+                <tr>
+                    <td class="fon">Username:</td>
+                    <td>
+                        <input type='text' name='username' [(ngModel)]="username">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fon">Password:</td>
+                    <td>
+                        <input type='password' name='password' [(ngModel)]="password">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <br/>
+        <button (click)="prijava()">Prijava</button>
+        <br/>
+        <p  style="color:rgb(206, 227, 246)">Još uvek nemate nalog: <a [routerLink]="['/registracija']" [queryParams]="{prikaz: false,reg:false}" queryParamsHandling="merge">Registruj se...</a></p>
+        <p style="color:rgb(206, 227, 246)">Prikaz fiskalnih računa: <input type="checkbox" [(ngModel)]="prikaz"></p>
+        <div>
+        </div>
+        <div class="poruka">{{message}}</div>  
+    </div>
+    <div *ngIf="prikaz==true && racuniPosl!=null && racuniPosl.length>0">
+        <table class="prik">
+            <tr>
+                <th>Naziv preduzeća</th>
+                <th>Iznos računa</th>
+                <th>Iznos poreza</th>
+                <th>Id računa</th>
+            </tr>
+            <tr *ngFor="let r of racuniPosl">
+                <th>{{r.imePreduzeca}}</th>
+                <th>{{r.vrednost}}</th>
+                <th>{{r.porez}}</th>
+                <th>{{r.id}}</th>
+            </tr>
+        </table>
+        <table class="prik">
+            <tr>
+                <th>Id računa</th>
+                <th>Naziv stavke</th>
+                <th>Količina stavki</th>
+            </tr>
+            <tr *ngFor="let s of stavke">
+                <th>{{s.id}}</th>
+                <th>{{s.naziv}}</th>
+                <th>{{s.kolicina}}</th>
+            </tr>
+        </table>
+        <br/>
+        <br/>
+    </div>
+</body>
+<app-footer></app-footer>

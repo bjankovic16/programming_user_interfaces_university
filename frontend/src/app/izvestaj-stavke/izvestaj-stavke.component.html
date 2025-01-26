@@ -1,0 +1,17 @@
+<app-header></app-header><br/>
+Izaberite iz kog racuna zelite da pregledate stavke:&nbsp;
+<select [(ngModel)]="idRacuna">
+    <option *ngFor="let r of racuni" [ngValue]="r.id">{{r.id}}</option>
+</select>&nbsp;
+<button (click)=odaberi()>Odaberi racun</button>
+
+<table *ngIf="idRacuna!=null && stavka.length>0">
+    <tr>
+        <th>Naziv stavke</th>
+        <th>Količina stavke</th>
+    </tr>
+    <tr *ngFor="let s of stavka">
+        <th>{{s.naziv}}</th>
+        <th>{{s.kolicina}}</th>
+    </tr>
+</table>

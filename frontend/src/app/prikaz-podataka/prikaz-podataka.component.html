@@ -1,0 +1,166 @@
+<app-header></app-header>
+<table *ngIf="p=='1'">
+    <tr>
+        <th>e-mail</th>
+        <th>{{preduzece.e_mail}}</th>
+        <th *ngIf="flagMail==true"><input type="text" [(ngModel)]="mail"></th>
+        <th *ngIf="flagMail==false"><button (click)="promeniMail()">Promeni mail</button></th>
+        <th *ngIf="flagMail==true"><button (click)="ponistiMail()">Poništi promenu</button></th>
+        <th *ngIf="flagMail==true"><button (click)="promenaMail()">Izvrši promenu</button></th>
+    </tr>
+    <tr>
+        <th>Ime</th>
+        <th>{{preduzece.ime}}</th>
+        <th *ngIf="flagIme==true"><input type="text" [(ngModel)]="ime"></th>
+        <th *ngIf="flagIme==false"><button (click)="promeniIme()">Promeni ime</button></th>
+        <th *ngIf="flagIme==true"><button (click)="ponistiIme()">Poništi promenu</button></th>
+        <th *ngIf="flagIme==true"><button (click)="promenaIme()">Izvrši promenu</button></th>
+    </tr>
+    <tr>
+        <th>Prezime</th>
+        <th>{{preduzece.prezime}}</th>
+        <th *ngIf="flagPrezime==true"><input type="text" [(ngModel)]="prezime"></th>
+        <th *ngIf="flagPrezime==false"><button (click)="promeniPrezime()">Promeni prezime</button></th>
+        <th *ngIf="flagPrezime==true"><button (click)="ponistiPrezime()">Poništi promenu</button></th>
+        <th *ngIf="flagPrezime==true"><button (click)="promenaPrezime()">Izvrši promenu</button></th>
+    </tr>
+    <tr>
+        <th>Telefon</th>
+        <th>{{preduzece.br_tel}}</th>
+        <th *ngIf="flagTelefon==true"><input type="text" [(ngModel)]="telefon"></th>
+        <th *ngIf="flagTelefon==false"><button (click)="promeniTelefon()">Promeni broj telefona</button></th>
+        <th *ngIf="flagTelefon==true"><button (click)="ponistiTelefon()">Poništi promenu</button></th>
+        <th *ngIf="flagTelefon==true"><button (click)="promenaTelefon()">Izvrši promenu</button></th>
+    </tr>
+    <tr>
+        <th>Kategorija</th>
+        <th>{{kategorija}}</th>
+        <th *ngIf="flagKategorija==true">
+            <input type="radio" name="tip" value="p" [(ngModel)]="tip">prodavnica
+            <input type="radio" name="tip" value="u" [(ngModel)]="tip">ugostiteljski objekat
+        </th>
+        <th *ngIf="flagKategorija==false"><button (click)="promeniKategoriju()">Promeni kategoriju</button></th>
+        <th *ngIf="flagKategorija==true"><button (click)="ponistiKategoriju()">Poništi promenu</button></th>
+        <th *ngIf="flagKategorija==true"><button (click)="promenaTip()">Izvrši promenu</button></th>
+    </tr>
+    <tr>
+        <th>Sifra delatnosti</th>
+        <th>
+            <textarea [(ngModel)]="preduzece.sifraDelatnosti" disabled></textarea>
+        </th>
+        <th *ngIf="flagSifre==true">
+            <select name="sifra" [(ngModel)]="sifre" multiple size="3">
+            <option value="1111">Umetnicko stvaralastvo</option>
+            <option value="2121">Kockanje i kladjenje</option>
+            <option value="0112">Gajenje pirinča</option>
+            <option value="0114">Gajenje šećerne trske</option>
+            <option value="1200">Proizvodnja duvanskih proizvoda</option>
+            <option value="1320">Proizvodnja tkanina</option>
+            <option value="2121">Kockanje i kladjenje</option>
+            <option value="5630">Usluge pripremanja i posluživanja pića</option>
+            <option value="2121">Kockanje i kladjenje</option>
+            <option value="4634">Trgovina na veliko pićima</option>
+            <option value="4617">Posredovanje u prodaji pića i hrane</option>
+            <option value="2321">Proizvodnja slatkiša</option>
+            </select>
+        </th>
+        <th *ngIf="flagSifre==false"><button (click)="promeniSifru()">Promeni šifru delatnosti</button></th>
+        <th *ngIf="flagSifre==true"><button (click)="ponistiSifru()">Poništi promenu</button></th>
+        <th *ngIf="flagSifre==true"><button (click)="promenaSifra()">Izvrši promenu</button></th>
+    </tr>
+    <tr>
+        <th>pdv</th>
+        <th>{{pdv}}</th>
+        <th *ngIf="flagPdv==true"><input type="checkbox" name="pdv" [(ngModel)]="pd"></th>
+        <th *ngIf="flagPdv==false"><button (click)="promeniPdv()">Promeni pdv</button></th>
+        <th *ngIf="flagPdv==true"><button (click)="ponistiPdv()">Poništi promenu</button></th>
+        <th *ngIf="flagPdv==true"><button (click)="promenaPdv()">Izvrši promenu</button></th>
+    </tr>
+    <tr>
+        <th colspan="4">{{poruka}}</th>
+    </tr>
+</table>
+
+<table *ngIf="p=='2'">
+    <tr *ngIf="preduzece.banke.length>0">
+        <th>Broj racuna</th>
+        <th>Ime Banke</th>
+    </tr>
+    <tr *ngFor="let b of preduzece.banke">
+        <th>{{b.brojRacuna}}</th>
+        <th>{{b.imeBanke}}</th>
+        <th *ngIf="promenaRacunS==false && promenaRacunN==false"><button (click)="promenaBankaS(b)">Promeni banku i račun</button></th>
+        <th *ngIf="promenaRacunS==false && promenaRacunN==false"><button (click)="obrisiRacun(b)">Obrisi racun</button></th>
+    </tr>
+    <tr *ngIf="promenaRacunS==true || promenaRacunN==true">
+        <th>Uneti broj računa:<input type="text" [(ngModel)]="brojR"></th>
+        <th>Uneti ime banke:<input type="text" [(ngModel)]="imeBanke"></th>
+    </tr>
+    <tr *ngIf="promenaRacunN==false && promenaRacunS==false"><button (click)="promenaBankaN()">Dodaj banku</button></tr>
+    <tr *ngIf="promenaRacunN==true || promenaRacunS==true">
+        <th colspan="3"><button (click)="bankaPromena()">Izvrši radnju</button></th>
+    </tr>
+    <tr *ngIf="promenaRacunN==true || promenaRacunS==true">
+        <th colspan="3"><button (click)="ponisti()">Poništi</button></th>
+    </tr>
+    <tr>
+        <th colspan="4"><p>{{poruka}}</p></th>
+    </tr>
+</table>
+
+<div *ngIf="p=='3'">
+    <table>
+        <tr *ngIf="preduzece.magacini.length>0">
+            <th>Ime magacina</th>
+        </tr>
+        <tr *ngFor="let m of preduzece.magacini">
+            <th>{{m.naziv}}</th>
+            <th *ngIf="promenaMagacinS==false && promenaMagacinN==false"><button (click)="promenaMagacinnS(m)">Promeni magacin</button></th>
+            <th *ngIf="promenaMagacinS==false && promenaMagacinN==false"><button (click)="obrisiMagacin(m.naziv)">Obriši magacin</button></th>
+        </tr>
+        <tr *ngIf="promenaMagacinS==true">
+            <th><input type="text" [(ngModel)]="magacinIme"></th>
+        </tr>
+        <tr *ngIf="promenaMagacinN==false && promenaMagacinS==false"><button (click)="promenaMagacinnN()">Dodaj magacin</button></tr>
+    <tr *ngIf="promenaMagacinN==true || promenaMagacinS==true">
+        <th colspan="3"><button (click)="magacinPromena()">Izvrši radnju</button></th>
+    </tr>
+    <tr *ngIf="promenaMagacinN==true || promenaMagacinS==true"> 
+        <th colspan="3"><button (click)="ponistiMagacin()">Poništi</button></th>
+    </tr>
+    <tr>
+        <th colspan="3"><p>{{poruka}}</p></th>
+    </tr>
+
+    </table>
+
+    <table>
+        <tr>
+            <th>Lokacija objekta</th>
+            <th>Tip kase</th>
+        </tr>
+        <tr *ngFor="let k of preduzece.kase">
+            <th>{{k.lokacija}}</th>
+            <th>{{k.tip}}</th>
+            <th *ngIf="promenaKasaS==false && promenaKasaN==false"><button (click)="promenaKasaaS(k)">Promeni kasu</button></th>
+            <th *ngIf="promenaKasaN==false && promenaKasaS==false"><button (click)="obrisiKasu(k)">Obriši kasu</button></th>
+        </tr>
+        <tr *ngIf="promenaKasaN==true || promenaKasaS==true">
+            <th><input type="text" [(ngModel)]="lokacijaKase"></th>
+            <th>
+                <select [(ngModel)]="tipKase">
+                    <option value="CS 30 PRO" selected>CS 30 PRO</option>
+                    <option value="CS 50">CS 50</option>
+                    <option value="SMART TILL">SMART TILL</option>
+                </select>
+            </th>
+        </tr>
+        <tr *ngIf="promenaKasaN==false && promenaKasaS==false"><button (click)="promenaKasaaN()">Dodaj kasu</button></tr>
+    <tr *ngIf="promenaKasaN==true || promenaKasaS==true">
+        <th colspan="3"><button (click)="kasaPromena()">Izvrši radnju</button></th>
+    </tr>
+    <tr *ngIf="promenaKasaN==true || promenaKasaS==true">
+        <th colspan="3"><button (click)="ponistiKasu()">Poništi</button></th>
+    </tr>
+    </table>
+</div>

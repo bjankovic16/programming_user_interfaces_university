@@ -1,0 +1,333 @@
+[{
+  "_id": {
+    "$oid": "62c2d07663c93443c7c5512e"
+  },
+  "id": 5,
+  "kor_ime": "korisnik1",
+  "imePreduzeca": "Alek",
+  "pib": "111122221",
+  "imeObjekta": "magacin1",
+  "stavke": [
+    {
+      "idRobe": "111",
+      "naziv": "Mleko",
+      "kor_ime": "korisnik1",
+      "kolicina": 3
+    }
+  ],
+  "nacinPlacanja": "gotovina",
+  "vrednost": 450,
+  "porez": 15,
+  "brLicne": "999900000",
+  "datum": "2022-07-04T11:35:18.833Z",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c2d09663c93443c7c55134"
+  },
+  "id": 6,
+  "kor_ime": "korisnik1",
+  "imePreduzeca": "Alek",
+  "pib": "111122221",
+  "imeObjekta": "magacin1",
+  "stavke": [
+    {
+      "idRobe": "111",
+      "naziv": "Mleko",
+      "kor_ime": "korisnik1",
+      "kolicina": 5
+    }
+  ],
+  "nacinPlacanja": "cek",
+  "vrednost": 750,
+  "porez": 15,
+  "brLicne": "999900000",
+  "ime": "Bogdan",
+  "prezime": "Jankovic",
+  "slip": "2222",
+  "datum": "2022-07-04T11:35:50.937Z",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c2d11563c93443c7c55142"
+  },
+  "id": 7,
+  "kor_ime": "korisnik1",
+  "imePreduzeca": "Alek",
+  "pib": "111122221",
+  "imeObjekta": "magacin2",
+  "stavke": [
+    {
+      "idRobe": "1112",
+      "naziv": "Pivo",
+      "kor_ime": "korisnik1",
+      "kolicina": 1
+    }
+  ],
+  "nacinPlacanja": "gotovina",
+  "vrednost": 290,
+  "porez": 14.5,
+  "brLicne": "666655554",
+  "datum": "2022-07-04T11:37:57.919Z",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c2d6f863c93443c7c55197"
+  },
+  "id": 8,
+  "kor_ime": "restoran1",
+  "imePreduzeca": "Jocke.doo",
+  "pib": "111199999",
+  "imeObjekta": "terasa",
+  "stavke": [
+    {
+      "idRobe": "12",
+      "naziv": "Sok",
+      "kor_ime": "restoran1",
+      "kolicina": 3
+    },
+    {
+      "idRobe": "12",
+      "naziv": "Sok",
+      "kor_ime": "restoran1",
+      "kolicina": 1
+    }
+  ],
+  "nacinPlacanja": "gotovina",
+  "vrednost": 768,
+  "porez": 38.4,
+  "brLicne": "999900000",
+  "datum": "2022-07-04T12:03:04.624Z",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cbe6f086f870fc70ccf658"
+  },
+  "id": 9,
+  "kor_ime": "restoran1",
+  "imePreduzeca": "Jocke.doo",
+  "pib": "111199999",
+  "imeObjekta": "krov",
+  "stavke": [
+    {
+      "idRobe": "111",
+      "naziv": "Limunada",
+      "kor_ime": "restoran1",
+      "kolicina": 5
+    }
+  ],
+  "nacinPlacanja": "gotovina",
+  "vrednost": 555,
+  "porez": 0,
+  "brLicne": "111222232",
+  "datum": "2022-07-11T09:01:36.073Z",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cbfc55f5282383c6cb431f"
+  },
+  "id": 10,
+  "kor_ime": "restoran1",
+  "imePreduzeca": "Jocke.doo",
+  "pib": "111199999",
+  "imeObjekta": "krov",
+  "stavke": [
+    {
+      "idRobe": "1111",
+      "naziv": "Fanta",
+      "kor_ime": "restoran1",
+      "kolicina": 4
+    }
+  ],
+  "nacinPlacanja": "gotovina",
+  "vrednost": 760,
+  "porez": 19,
+  "brLicne": "999900000",
+  "datum": "2022-07-11T10:32:53.322Z",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cbfd45f5282383c6cb4333"
+  },
+  "id": 11,
+  "kor_ime": "restoran1",
+  "imePreduzeca": "Jocke.doo",
+  "pib": "111199999",
+  "imeObjekta": "magacin007",
+  "stavke": [
+    {
+      "idRobe": "1111",
+      "naziv": "Fanta",
+      "kor_ime": "restoran1",
+      "kolicina": 5
+    },
+    {
+      "idRobe": "1111",
+      "naziv": "Fanta",
+      "kor_ime": "restoran1",
+      "kolicina": 1
+    }
+  ],
+  "nacinPlacanja": "virman",
+  "vrednost": 1140,
+  "porez": 38,
+  "datum": "2022-07-11T10:36:53.575Z",
+  "narucilac": "111122221",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cd435cfdf66f34fd232dd8"
+  },
+  "id": 12,
+  "kor_ime": "restoran1",
+  "imePreduzeca": "Jocke.doo",
+  "pib": "111199999",
+  "imeObjekta": "terasa",
+  "stavke": [
+    {
+      "idRobe": "912092",
+      "naziv": "Pivo Niksicko",
+      "kor_ime": "restoran1",
+      "kolicina": 3
+    },
+    {
+      "idRobe": "827200",
+      "naziv": "Rosa Voda",
+      "kor_ime": "restoran1",
+      "kolicina": 3
+    }
+  ],
+  "nacinPlacanja": "cek",
+  "vrednost": 1269,
+  "porez": 0,
+  "brLicne": "999900000",
+  "ime": "Bogdan",
+  "prezime": "Jankovic",
+  "slip": "3343",
+  "datum": "2022-07-12T09:48:12.850Z",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cd43ecfdf66f34fd232de1"
+  },
+  "id": 13,
+  "kor_ime": "restoran1",
+  "imePreduzeca": "Jocke.doo",
+  "pib": "111199999",
+  "imeObjekta": "terasa",
+  "stavke": [
+    {
+      "idRobe": "78732",
+      "naziv": "Pivo Tuborg",
+      "kor_ime": "restoran1",
+      "kolicina": 1
+    }
+  ],
+  "nacinPlacanja": "gotovina",
+  "vrednost": 245,
+  "porez": 24.5,
+  "brLicne": "999900000",
+  "datum": "2022-07-12T09:50:36.497Z",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cd4416fdf66f34fd232de4"
+  },
+  "id": 14,
+  "kor_ime": "restoran1",
+  "imePreduzeca": "Jocke.doo",
+  "pib": "111199999",
+  "imeObjekta": "terasa",
+  "stavke": [
+    {
+      "idRobe": "00991",
+      "naziv": "Koka Kola",
+      "kor_ime": "restoran1",
+      "kolicina": 1
+    }
+  ],
+  "nacinPlacanja": "cek",
+  "vrednost": 280,
+  "porez": 0,
+  "brLicne": "999900000",
+  "ime": "Bogdan",
+  "prezime": "Jankovic",
+  "slip": "1212",
+  "datum": "2022-07-12T09:51:18.337Z",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cd4483fdf66f34fd232df3"
+  },
+  "id": 15,
+  "kor_ime": "restoran1",
+  "imePreduzeca": "Jocke.doo",
+  "pib": "111199999",
+  "imeObjekta": "terasa",
+  "stavke": [
+    {
+      "idRobe": "1232",
+      "naziv": "Sok",
+      "kor_ime": "restoran1",
+      "kolicina": 1
+    }
+  ],
+  "nacinPlacanja": "cek",
+  "vrednost": 192,
+  "porez": 19.2,
+  "brLicne": "999900000",
+  "ime": "Bogdan",
+  "prezime": "Jankovic",
+  "slip": "2122",
+  "datum": "2022-07-12T09:53:07.409Z",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cd459dfdf66f34fd232e0e"
+  },
+  "id": 16,
+  "kor_ime": "restoran1",
+  "imePreduzeca": "Jocke.doo",
+  "pib": "111199999",
+  "imeObjekta": "terasa",
+  "stavke": [
+    {
+      "idRobe": "827200",
+      "naziv": "Rosa Voda",
+      "kor_ime": "restoran1",
+      "kolicina": 5
+    }
+  ],
+  "nacinPlacanja": "cek",
+  "vrednost": 615,
+  "porez": 0,
+  "brLicne": "999900000",
+  "ime": "Bogdan",
+  "prezime": "Jankovic",
+  "slip": "4334",
+  "datum": "2022-02-12T09:57:49.937Z",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62ce9e04b66ee24735bd6ec2"
+  },
+  "id": 17,
+  "kor_ime": "restoran1",
+  "imePreduzeca": "Jocke.doo",
+  "pib": "111199999",
+  "imeObjekta": "terasa",
+  "stavke": [
+    {
+      "idRobe": "00991",
+      "naziv": "Koka Kola",
+      "kor_ime": "restoran1",
+      "kolicina": 2
+    }
+  ],
+  "nacinPlacanja": "virman",
+  "vrednost": 560,
+  "porez": 0,
+  "datum": "2022-07-13T10:27:16.984Z",
+  "narucilac": "111122221",
+  "__v": 0
+}]

@@ -1,0 +1,79 @@
+table{
+    table-layout: auto;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    color: #38444d;
+    width: 50%;
+    position: center;
+    margin-top: 0.60cm;
+    width:14cm
+}
+button{
+    width: 4.5cm;
+    height: 44px;
+    font-size: large;
+    color: antiquewhite;
+    background-color: #38444d;
+    cursor: pointer;
+    background-color:rgb(244, 13, 13); 
+    border-color:rgb(244, 13, 13); 
+}
+input[type=text] {
+    transition: width 0.4s ease-in-out;
+    height:33px
+}
+
+textarea{
+    resize: none;
+    color:#38444d;
+    font-size: 20px;
+    font-display: center;
+    border: #38444d;
+    width: 100%;
+    width: 4.2cm;
+    height: 44px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+select{
+    height:30px;
+    width:120px;
+}
+.centar{
+    display: flex;
+    justify-content: center;
+    align-items: center;padding: 10px; 
+}
+
+.tabelaPrikaz{
+    table-layout: auto;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    color: #38444d;
+    width: 50%;
+    position: center;
+    margin-top: 0.60cm;
+    width:30cm
+}
+.tabelaPrikazV{
+    table-layout: auto;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    color: #38444d;
+    width: 50%;
+    position: center;
+    margin-top: 0.60cm;
+    width:30cm;
+    border-spacing:15px;
+}
+input[type=file]{
+    width:5cm;
+}

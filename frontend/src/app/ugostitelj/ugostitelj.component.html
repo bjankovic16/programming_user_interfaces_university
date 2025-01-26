@@ -1,0 +1,28 @@
+<ul>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Podaci o preduzecu</a>
+        <div class="dropdown-content">
+          <a [routerLink]="['opstiPodaci']" [queryParams]="{opsti: 1}" queryParamsHandling="merge">Opšti podaci</a>
+          <a [routerLink]="['opstiPodaci']" [queryParams]="{opsti: 2}" queryParamsHandling="merge">Žiro računi</a>
+          <a [routerLink]="['opstiPodaci']" [queryParams]="{opsti: 3}" queryParamsHandling="merge">Magacini i kase</a>
+        </div>
+      </li>
+    <li><a [routerLink]="['Narucioci']">Naručioci</a></li>
+    <li><a [routerLink]="['Roba']">Robe i usluge</a></li>
+    <li><a [routerLink]="['RasporedArtikala']">Raspored artikala</a></li>
+    <li><a [routerLink]="['UnosStolova']">Raspored stolova</a></li>
+    <li><a [routerLink]="['IzdavanjeRacuna']">Izdavanje računa</a></li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Pregled izveštaja</a>
+      <div class="dropdown-content">
+        <a [routerLink]="['dnevniPazar']">Izveštaj dnevnog pazara</a>
+        <a [routerLink]="['izvestajPoStavkama']">Izveštaj po stavkama</a>
+      </div>
+    </li>
+</ul> 
+
+<div style="text-align:right ;">
+  <mat-icon style="height:50px;width:50px;font-size: 50px;cursor: pointer;" (click)="logout()">logout</mat-icon>  
+ &nbsp;&nbsp;
+  <mat-icon style="height:50px;width:50px;font-size: 50px; cursor: pointer;" (click)="openDialog()">build</mat-icon>
+</div>

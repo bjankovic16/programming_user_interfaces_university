@@ -1,0 +1,151 @@
+<app-header></app-header>
+<div *ngIf="prikaz==true">
+    Čekirati za promenu načina unosa<input type="checkbox"  [(ngModel)]="registracija">
+</div>
+
+<div>
+    <div *ngIf="registracija==true && prikaz==true">
+        <h2 class="text">Registrovanje kupca</h2>
+        <table>
+            <tr>
+                <td>Uneti username:</td>
+                <td>
+                    <input type='text' [(ngModel)]="kor_ime">
+                </td>
+            </tr>
+            <tr>
+                <td>Uneti lozinku:</td>
+                <td>
+                    <input type='text' [(ngModel)]="lozinka">
+                </td>
+            </tr>
+            <tr>
+                <td>Uneti ime:</td>
+                <td>
+                    <input type='text' [(ngModel)]="ime">
+                </td>
+            </tr>
+            <tr>
+                <td>Uneti prezime:</td>
+                <td>
+                    <input type='text' [(ngModel)]="prezime">
+                </td>
+            </tr>
+            <tr>
+                <td>Uneti kontakt telefon:</td>
+                <td>
+                    <input type='text' [(ngModel)]="telefon">
+                </td>
+            </tr>
+            <tr>
+                <td>Uneti broj licne:</td>
+                <td>
+                    <input type='text' [(ngModel)]="licna">
+                </td>
+            </tr>
+            <div class="poruka">
+                <button (click)="unesiKorisnika()">Registruj se</button> &nbsp; &nbsp; {{porukaRegistracija1}}
+            </div>
+        </table>
+    </div>
+    <div *ngIf="registracija==false">
+        <h2 class="text">Registrovanje preduzeca</h2>
+        <table>
+            <tr>
+                <td>Uneti username:</td>
+                <td>
+                    <input type='text' name='username' [(ngModel)]="kor_ime">
+                </td>
+            </tr>
+            <tr>
+                <td>Uneti password:</td>
+                <td>
+                    <input type='text' name='password1' [(ngModel)]="pas1">
+                </td>
+            </tr>
+            <tr>
+                <td>Ponoviti password:</td>
+                <td>
+                    <input type='text' name='password2' [(ngModel)]="pas2">
+                </td>
+            </tr>
+            <tr>
+                <td>Uneti ime:</td>
+                <td>
+                    <input type='text' [(ngModel)]="ime">
+                </td>
+            </tr>
+            <tr>
+                <td>Uneti prezime:</td>
+                <td>
+                    <input type='text' [(ngModel)]="prezime">
+                </td>
+            </tr>
+            <tr>
+                <td>Uneti broj telefona:</td>
+                <td>
+                    <input type='text' [(ngModel)]="telefon">
+                </td>
+            </tr>
+            <tr>
+                <td>Uneti e-mail:</td>
+                <td>
+                    <input type='text' [(ngModel)]="e_mail">
+                </td>
+            </tr>
+            <tr>
+                <td>Uneti naziv preduzeca:</td>
+                <td>
+                    <input type='text' [(ngModel)]="naziv">
+                </td>
+            </tr>
+            <tr>
+                <td>Uneti drzavu:</td>
+                <td>
+                    <input type='text' [(ngModel)]="drzava">
+                </td>
+            </tr>
+            <tr>
+                <td>Uneti grad:</td>
+                <td>
+                    <input type='text' [(ngModel)]="grad">
+                </td>
+            </tr>
+            <tr>
+                <td>Uneti postanski broj:</td>
+                <td>
+                    <input type='text' [(ngModel)]="postanskiBr">
+                </td>
+            </tr>
+            <tr>
+                <td>Uneti ulicu:</td>
+                <td>
+                    <input type='text' [(ngModel)]="ulica">
+                </td>
+            </tr>
+            <tr>
+                <td>Uneti broj:</td>
+                <td>
+                    <input type='text' [(ngModel)]="broj">
+                </td>
+            </tr>
+            <tr>
+                <td>Uneti PIB:</td>
+                <td>
+                    <input type='text' [(ngModel)]="pib">
+                </td>
+            </tr>
+            <tr>
+                <td>Uneti maticni broj preduzeca:</td>
+                <td>
+                    <input type='text' [(ngModel)]="matBr">
+                </td>
+            </tr>
+        <input type="file" name="image" (change)="onFileSelected($event)" accept=".png,.jpg"><br/><br/>
+        <div class="poruka">
+        <button name="data" type="button" (click)="regPreduzece()">Registruj se</button>
+          &nbsp; &nbsp; {{porukaRegistracija}}
+         </div>
+    </table>
+    </div>
+</div>

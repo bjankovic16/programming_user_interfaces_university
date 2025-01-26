@@ -1,0 +1,266 @@
+[{
+  "_id": {
+    "$oid": "62c2d03f63c93443c7c5511f"
+  },
+  "kor_ime": "korisnik1",
+  "imePreduzeca": "Alek",
+  "sifra": "1112",
+  "naziv": "Pivo",
+  "jedinica": "litar",
+  "stopa": 20,
+  "proizvodjac": "Jelen",
+  "nazivMagacina": "magacin2",
+  "nabavna": 190,
+  "prodajna": 290,
+  "stanje": 99,
+  "minKolicina": 50,
+  "maxKolicina": 500,
+  "slika": "puska.jpg",
+  "__v": 0,
+  "kategorija": "pice"
+},{
+  "_id": {
+    "$oid": "62c2d00b63c93443c7c55117"
+  },
+  "kor_ime": "korisnik1",
+  "imePreduzeca": "Alek",
+  "sifra": "111",
+  "naziv": "Mleko",
+  "jedinica": "litar",
+  "stopa": 10,
+  "proizvodjac": "Imlek",
+  "poreklo": "Srbija",
+  "nazivMagacina": "magacin1",
+  "nabavna": 100,
+  "prodajna": 150,
+  "stanje": 2,
+  "minKolicina": 90,
+  "maxKolicina": 900,
+  "slika": "pozadina.jpg",
+  "__v": 0,
+  "kategorija": "pice"
+},{
+  "_id": {
+    "$oid": "62cbf5e486f870fc70ccf6a2"
+  },
+  "kor_ime": "restoran1",
+  "imePreduzeca": "Jocke.doo",
+  "sifra": "912092",
+  "naziv": "Pivo Niksicko",
+  "jedinica": "tona",
+  "stopa": 0,
+  "proizvodjac": "Niksic.doo",
+  "tip": "pice",
+  "nazivMagacina": "magacin27",
+  "nabavna": 190,
+  "prodajna": 300,
+  "stanje": 18,
+  "minKolicina": 222,
+  "maxKolicina": 554,
+  "slika": "puska.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cbf61a86f870fc70ccf6a7"
+  },
+  "kor_ime": "restoran1",
+  "imePreduzeca": "Jocke.doo",
+  "sifra": "00991",
+  "naziv": "Koka Kola",
+  "jedinica": "tona",
+  "stopa": 0,
+  "proizvodjac": "Koka.doo",
+  "tip": "pice",
+  "nazivMagacina": "magacin007",
+  "nabavna": 190,
+  "prodajna": 280,
+  "stanje": 87,
+  "minKolicina": 90,
+  "maxKolicina": 90,
+  "slika": "puska.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cbf66486f870fc70ccf6b1"
+  },
+  "kor_ime": "restoran1",
+  "imePreduzeca": "Jocke.doo",
+  "sifra": "909",
+  "naziv": "Medvedja Krv",
+  "jedinica": "tona",
+  "stopa": 0,
+  "proizvodjac": "Medved.doo",
+  "tip": "pice",
+  "nazivMagacina": "magacin007",
+  "nabavna": 190,
+  "prodajna": 300,
+  "stanje": 32,
+  "minKolicina": 333,
+  "maxKolicina": 555,
+  "slika": "puska.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cbf40286f870fc70ccf687"
+  },
+  "kor_ime": "restoran1",
+  "imePreduzeca": "Jocke.doo",
+  "sifra": "78732",
+  "naziv": "Pivo Tuborg",
+  "jedinica": "paket",
+  "stopa": 10,
+  "proizvodjac": "Tuborg.doo",
+  "tip": "pice",
+  "nazivMagacina": "magacin27",
+  "nabavna": 190,
+  "prodajna": 245,
+  "stanje": 79,
+  "minKolicina": 90,
+  "maxKolicina": 190,
+  "slika": "puska.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cbf64286f870fc70ccf6ac"
+  },
+  "kor_ime": "restoran1",
+  "imePreduzeca": "Jocke.doo",
+  "sifra": "789897",
+  "naziv": "Vino Zupa",
+  "jedinica": "litar",
+  "stopa": 10,
+  "proizvodjac": "Zupa.doo",
+  "tip": "pice",
+  "nazivMagacina": "magacin007",
+  "nabavna": 190,
+  "prodajna": 212,
+  "stanje": 21,
+  "minKolicina": 233,
+  "maxKolicina": 666,
+  "slika": "puska.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c2d6cc63c93443c7c5518c"
+  },
+  "kor_ime": "restoran1",
+  "imePreduzeca": "Jocke.doo",
+  "sifra": "1232",
+  "naziv": "Sok",
+  "jedinica": "komad",
+  "stopa": 10,
+  "proizvodjac": "Nektar.doo",
+  "tip": "pice",
+  "nazivMagacina": "magacin5",
+  "nabavna": 100,
+  "prodajna": 192,
+  "stanje": 0,
+  "minKolicina": 1,
+  "maxKolicina": 100,
+  "slika": "puska.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cbe66c86f870fc70ccf64d"
+  },
+  "kor_ime": "restoran1",
+  "imePreduzeca": "Jocke.doo",
+  "sifra": "111",
+  "naziv": "Limunada",
+  "jedinica": "komad",
+  "stopa": 0,
+  "proizvodjac": "Limun.doo",
+  "tip": "pice",
+  "poreklo": "Indija",
+  "barKod": "222",
+  "nazivMagacina": "magacin4",
+  "nabavna": 100,
+  "prodajna": 111,
+  "stanje": 4,
+  "minKolicina": 22,
+  "maxKolicina": 222,
+  "slika": "puska.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cbf33686f870fc70ccf679"
+  },
+  "kor_ime": "restoran1",
+  "imePreduzeca": "Jocke.doo",
+  "sifra": "1111",
+  "naziv": "Fanta",
+  "jedinica": "komad",
+  "stopa": 10,
+  "proizvodjac": "Coca",
+  "tip": "pice",
+  "nazivMagacina": "magacin007",
+  "nabavna": 100,
+  "prodajna": 190,
+  "stanje": 2,
+  "minKolicina": 22,
+  "maxKolicina": 222,
+  "slika": "puska.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cbf35c86f870fc70ccf67e"
+  },
+  "kor_ime": "restoran1",
+  "imePreduzeca": "Jocke.doo",
+  "sifra": "827200",
+  "naziv": "Rosa Voda",
+  "jedinica": "gajba",
+  "stopa": 0,
+  "proizvodjac": "Coca",
+  "tip": "pice",
+  "nazivMagacina": "magacin27",
+  "nabavna": 100,
+  "prodajna": 123,
+  "stanje": 4,
+  "minKolicina": 111,
+  "maxKolicina": 666,
+  "slika": "puska.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cbf46286f870fc70ccf691"
+  },
+  "kor_ime": "restoran1",
+  "imePreduzeca": "Jocke.doo",
+  "sifra": "7882",
+  "naziv": "Pivo Jelen",
+  "jedinica": "tona",
+  "stopa": 10,
+  "proizvodjac": "Rogonja.doo",
+  "tip": "pice",
+  "poreklo": "Turska",
+  "nazivMagacina": "magacin007",
+  "nabavna": 190,
+  "prodajna": 290,
+  "stanje": 21,
+  "minKolicina": 23,
+  "maxKolicina": 32,
+  "slika": "puska.jpg",
+  "__v": 0,
+  "kategorija": "pice"
+},{
+  "_id": {
+    "$oid": "62cbf43286f870fc70ccf68c"
+  },
+  "kor_ime": "restoran1",
+  "imePreduzeca": "Jocke.doo",
+  "sifra": "78821",
+  "naziv": "Pivo Haineken",
+  "jedinica": "tona",
+  "stopa": 0,
+  "proizvodjac": "Hain.doo",
+  "tip": "pice",
+  "nazivMagacina": "magacin007",
+  "nabavna": 190,
+  "prodajna": 290,
+  "stanje": 12,
+  "minKolicina": 122,
+  "maxKolicina": 3323,
+  "slika": "elektronska-fiskalizacija.png",
+  "__v": 0
+}]

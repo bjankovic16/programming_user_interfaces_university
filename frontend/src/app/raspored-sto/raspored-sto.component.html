@@ -1,0 +1,96 @@
+<button (click)="prikaziKomp()">{{ime}}</button>
+<div *ngIf="prikazKomponenti==false">
+    <br/>
+    Odabir stola:&nbsp;&nbsp;<select [(ngModel)]="odabranSto">
+        <option *ngFor="let s of stolovi" value="{{s.id}}">{{s.id}}</option>
+    </select>&nbsp;
+    <button (click)="odaberiSlobodanSto()">Odaberi</button>&nbsp;<p>{{porukaOdaberi}}</p><br/>
+    Naručivanje:&nbsp;&nbsp;
+    <select [(ngModel)]="dodajNaRac">
+        <option *ngFor="let s of stoloviPoruceno" value="{{s.naziv}}">{{s.naziv}}</option>
+    </select>&nbsp;
+    <button (click)="porucivanjeMusterije()">Naruči</button>&nbsp;<p>{{porukaNaruci}}</p>
+    <div *ngIf="porucivanje==true">
+        Odabir robe:&nbsp;&nbsp;
+        <select [(ngModel)]="robaKupovina">
+            <option *ngFor="let r of roba" [ngValue]="r">{{r.naziv}}</option>
+        </select>&nbsp;
+        <button (click)="odaberiRobu()">Odaberi</button>
+        </div>
+        <div *ngIf="odabranaRoba==true">
+            Unesite kolicinu: <input type="text" [(ngModel)]="kolicina">&nbsp;
+            <button (click)="kupiStavku()">Naruči</button>&nbsp;
+            <button (click)="zatvoriRacun()">Završi porucivanje</button>
+            <p>{{porukaKupovina}}</p>
+        </div>
+    </div>
+    <div *ngIf="prikazKomponenti==false">
+        Naplaćivanje:
+    <select [(ngModel)]="stoZavrsio">
+        <option *ngFor="let s of stoloviPoruceno" ngValue="{{s.naziv}}">{{s.naziv}}</option>
+    </select>&nbsp;
+    <button (click)="stoZavrsioNaplati()">Naplati</button><p>{{nString}}</p>
+    </div>
+    <div *ngIf="biranjeTipa==true">
+        <select [(ngModel)]="tipPlacanja">
+            <option value="gotovina">Gotovina</option>
+            <option value="cek">Cek kartica</option>
+            <option value="virman">Virman</option>
+        </select>
+        <div *ngIf="tipPlacanja=='gotovina'">
+            Unesite novac:&nbsp;<input type="text" [(ngModel)]="novac">&nbsp;
+            Unesite broj licne:<input type="text" [(ngModel)]="licna"><br/>
+            <button (click)="platiGotovina()">Plati</button>&nbsp;<p>{{porukaNaplati}}</p>&nbsp;
+            Kusur:&nbsp;{{kusur}}
+        </div>
+        <div *ngIf="tipPlacanja=='cek'">
+            Unesite ime:<input type="text" [(ngModel)]="ime1">&nbsp;
+            Unesite prezime:<input type="text" [(ngModel)]="prezime">&nbsp;<br/>
+            Unesite broj licne karte:<input type="text" [(ngModel)]="licna">&nbsp;
+            Unesite broj slip racuna<input type="text" [(ngModel)]="slip">&nbsp;
+            <button (click)="platiCek()">Plati</button>&nbsp;<p>{{porukaNaplati}}</p>
+        </div>
+        <div *ngIf="tipPlacanja=='virman'">
+            <select [(ngModel)]="pibVirmana">
+                <option *ngFor="let n of narucioci" [ngValue]="n.pib">{{n.naziv}}-{{n.pib}}</option>
+            </select>&nbsp;
+            <button (click)="platiVirman()">Plati</button>
+        </div>
+            <button (click)="dodajNaRacu()">Kraj pregleda</button>
+        </div>
+    <div>
+</div>
+
+<div>
+<canvas  (mousedown)="myFunc($event)" #canvas width="600" height="300"></canvas>
+<div *ngIf="prikazKomponenti==false">
+<button type="button" (click)="sacuvaj()">Sačuvaj izbor</button>
+<button (click)="unetiTip()">Uneti tip stola</button>
+<button (click)="premestitiSto()">Premestiti sto</button>
+</div>
+<div *ngIf="unosenje==true">
+    Naziv:&nbsp;<input type="text" [(ngModel)]="nazivStola"><br/>
+    Tip stola:<input type="radio" [(ngModel)]="tipStola" value="okrugli">Okrugli
+              <input type="radio" [(ngModel)]="tipStola" value="pravougaoni">Pravougaoni<br>
+    <div *ngIf="tipStola=='pravougaoni'">
+        Sirina stola:<input type="text" [(ngModel)]="sirinaStola"><br/>
+        Duzina stola:<input type="text" [(ngModel)]="duzinaStola"><br/>
+    </div>
+    <div *ngIf="tipStola=='okrugli'">
+        Poluprecnik stola<input type="text" [(ngModel)]="poluprecnikStola"><br/>
+    </div>
+    <button (click)="ubaci()">Potvrda</button>&nbsp;
+    <button (click)="ponisti()">Ponisti</button>
+</div>
+
+<div *ngIf="premes==true">
+    <select [(ngModel)]="idStola">
+        <option *ngFor="let s of stolovi" value="{{s.id}}">{{s.naziv}} broj stola je {{s.id}}</option>
+    </select>
+    <button (click)="odaberiSto()">Odaberi sto</button><button (click)="premes=false; porukaO=''">Poništi</button>
+</div>
+<div *ngIf="zavrsavanjePrem==true">
+    <button (click)="zavrsiPremestanje()">Premesti</button><p *ngIf="uslov==true">{{porukaMoguce}}</p>
+</div><p>{{porukaO}}</p>
+</div>
+

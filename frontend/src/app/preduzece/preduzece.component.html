@@ -1,0 +1,88 @@
+<app-header></app-header>
+<h2 class="text">Unesite dodatne podatke o vašem preduzeću:</h2>
+<table>
+    <tr>
+        <th style="text-align: left">Odaberite tip</th>
+        <th><input type="radio" name="tip" value="p" [(ngModel)]="tip">prodavnica
+            <input type="radio" name="tip" value="u" [(ngModel)]="tip">ugostiteljski objekat<br/>
+        </th>
+    </tr>
+    <tr>
+        <th style="text-align: left">Odaberite šifru delatnosti</th>
+        <th><select name="sifra" [(ngModel)]="sifra" multiple size="3">
+            <option value="1111" selected>Umetnicko stvaralastvo</option>
+            <option value="2121">Kockanje i kladjenje</option>
+            <option value="0112">Gajenje pirinča</option>
+            <option value="0114">Gajenje šećerne trske</option>
+            <option value="1200">Proizvodnja duvanskih proizvoda</option>
+            <option value="1320">Proizvodnja tkanina</option>
+            <option value="2121">Kockanje i kladjenje</option>
+            <option value="5630">Usluge pripremanja i posluživanja pića</option>
+            <option value="2121">Kockanje i kladjenje</option>
+            <option value="4634">Trgovina na veliko pićima</option>
+            <option value="4617">Posredovanje u prodaji pića i hrane</option>
+            <option value="2321">Proizvodnja slatkiša</option>
+        </select>
+    </th>
+    </tr>
+    <tr>
+        <th style="text-align: left">Odaberite da li je preduzeće u pdv-u</th>
+        <th><input type="checkbox" name="pdv" [(ngModel)]="pdv"><br/></th>
+    </tr>
+    <tr>
+        <th style="text-align: left">Unesite broj računa koje posedujete
+        <input type="text" [(ngModel)]="brojRac" (change)="brojRacuna(brojRac)"><br/> 
+        </th>
+        <th>
+            <table *ngIf="brojRac>0">
+                <tr>
+                    <th>unos broj racuna</th>
+                    <th>unos ime banke</th>
+                </tr>
+                <tr *ngFor="let b of banke">
+                    <th><input type="text" [(ngModel)]="b.brojRacuna"></th>
+                    <th><input type="text" [(ngModel)]="b.imeBanke"></th>
+                </tr>
+            </table>
+        </th>
+    </tr>
+    <tr>
+        <th style="text-align: left">Unesite broj magacina koje posedujete
+        <input type="text" [(ngModel)]="brojMagacina"><br/></th>
+    </tr>
+    <tr>
+        <th style="text-align: left">Unesite broj kasa koje posedujete
+            <input type="text" [(ngModel)]="brojKas" (change)="brojKasa(brojKas)">
+        </th>
+        <th>
+            <table *ngIf="brojKas>0">
+                <tr>
+                    <th>unesite lokaciju objekta</th>
+                    <th>izaberite tip kase</th>
+                </tr>
+                <tr *ngFor="let k of kase">
+                    <th><input type="text" [(ngModel)]="k.lokacija"></th>
+                    <th>
+                        <select [(ngModel)]="k.tip">
+                            <option value="CS 30 PRO">CS 30 PRO</option>
+                            <option value="CS 50">CS 50</option>
+                            <option value="SMART TILL">SMART TILL</option>
+                        </select>
+                    </th>
+                </tr>
+            </table>
+        </th>    
+    </tr>
+    <div class="poruka">
+        <button (click)="preduzeceInfo()">Potvrdi</button>
+          &nbsp; &nbsp; {{mes}}
+         </div>
+</table>
+
+
+
+
+
+
+
+

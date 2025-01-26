@@ -1,0 +1,12 @@
+table{
+    table-layout: auto;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    color: #38444d;
+    width: 50%;
+    position: center;
+    margin-top: 2cm;
+    width:18cm
+}

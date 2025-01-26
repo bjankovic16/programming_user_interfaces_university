@@ -1,0 +1,34 @@
+[{
+  "_id": {
+    "$oid": "62c593063fd4ce17e1f55ef3"
+  },
+  "kor_ime": "korisnik1",
+  "naziv": "Jocke.doo",
+  "pib": "111199999",
+  "mat_br": "99997777",
+  "brojDana": 5,
+  "procenat": 55,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c593a33fd4ce17e1f55ef6"
+  },
+  "kor_ime": "korisnik1",
+  "naziv": "Firma1",
+  "pib": "111122222",
+  "mat_br": "22211112",
+  "brojDana": 21,
+  "procenat": 21,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cbfce2f5282383c6cb432b"
+  },
+  "kor_ime": "restoran1",
+  "naziv": "Alek",
+  "pib": "111122221",
+  "mat_br": "22221111",
+  "brojDana": 30,
+  "procenat": 30,
+  "__v": 0
+}]

@@ -1,0 +1,21 @@
+[{
+  "_id": {
+    "$oid": "62c2d12663c93443c7c55148"
+  },
+  "ime": "pice",
+  "potkategorije": [
+    "alkohol",
+    "sok"
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62ce9eb4b66ee24735bd6ed8"
+  },
+  "ime": "hrana",
+  "potkategorije": [
+    "gulas",
+    "supa"
+  ],
+  "__v": 0
+}]

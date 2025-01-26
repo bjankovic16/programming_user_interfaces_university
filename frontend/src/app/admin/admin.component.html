@@ -1,0 +1,54 @@
+<app-header></app-header><br/>
+<div style="display:flex">
+    <div>
+        <a [routerLink]="['/registracijaA']" [queryParams]="{prikaz: true,reg:true}" queryParamsHandling="merge">Registruj korisnika aplikacije</a><br/><br/>
+        Pregled dnevnog izvestaja:<br/>
+        Cekirajte ako zelite pretragu po nazivu firme:
+        <input type="checkbox" [(ngModel)]="poNazivu"><br/>
+        <div *ngIf="poNazivu==true">
+        Naziv preduzeca:<input type="text" [(ngModel)]="naziv" (change)="onChangeEvent($event)"><br/>
+        </div>
+        Cekirajte ako zelite pretragu po pibu
+        <input type="checkbox" [(ngModel)]="poPib"><br/>
+        <div *ngIf="poPib==true">
+        PIB:<input type="text" [(ngModel)]="pib" (change)="onChangeEvent($event)"><br/>
+        </div>
+        Datum od:<input type="date" [(ngModel)]="datumOd" (change)="onChangeEvent($event)">
+        Datum do:<input type="date" [(ngModel)]="datumDo" (change)="onChangeEvent($event)">
+
+        <table *ngIf="racuniPrikaz!=null && racuniPrikaz.length>0">
+            <tr>
+                <th>Ime preduzeća</th>
+                <th>PIB</th>
+                <th>Profit</th>
+                <th>Porez</th>
+            </tr>
+            <tr *ngFor="let r of racuniPrikaz">
+                <th>{{r.imePreduzeca}}</th>
+                <th>{{r.pib}}</th>
+                <th>{{r.vrednost}}</th>
+                <th>{{r.porez}}</th>
+            </tr>
+        </table>
+        <br/>
+        <table *ngIf="neregistrovana!=null && neregistrovana.length>0">
+            <tr>
+                <th>Ime preduzeća</th>
+                <th>Matični broj</th>
+                <th>PIB</th>
+            </tr>
+            <tr *ngFor="let p of neregistrovana">
+                <th>{{p.naziv}}</th>
+                <th>{{p.mat_br}}</th>
+                <th>{{p.pib}}</th>
+                <th><button (click)="registruj(p.kor_ime)">REGISTRUJ</button></th>
+                <th><button (click)="obrisi(p.kor_ime)">PONIŠTI</button></th>
+            </tr>
+        </table>
+    </div>
+    <div style="margin-left: auto;">
+        <mat-icon style="height:50px;width:50px;font-size: 50px;cursor: pointer;" (click)="logout()">logout</mat-icon>  
+            &nbsp;&nbsp;
+        <mat-icon style="height:50px;width:50px;font-size: 50px; cursor: pointer;" (click)="openDialog()">build</mat-icon>
+    </div>
+</div>
